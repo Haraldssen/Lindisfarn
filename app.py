@@ -1,25 +1,14 @@
-# нахождение корня квадратного уравнения через дискриминанту
-# a * х * х + b * x + c = 0
-# D = b * b - 4 * a * c
-# если D > 0, то x = (-b + sqrt(D)) / (a * 2), Х = (-b - sqrt(D)) / (a * 2)
-# если D = 0, то x = - b / (a * 2)
-# если D < 0, то корней нет
+from formulaEquation import lineEqual
 
-a = 3
-b = 10
-c = 1
+arr = lineEqual(4, 2)
+for i in arr:
+    print(i)
 
-D = (b * b) - (4 * a * c)
+a = 0
 
-import math
-
-d = math.sqrt(D)
-
-if D > 0:
-    x = ((b + d) / (a * 2)) , 'и', ((-b - d) / (a * 2))
-    print(x)
-if D == 0:
-    x = ('(- b / (a * 2)')
-    print (x)
-if D < 0:
-    print('корней нет')
+while True:
+    print(a)
+    a +=2
+    if a < 10:
+        continue
+    break
