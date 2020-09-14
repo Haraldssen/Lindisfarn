@@ -28,12 +28,14 @@ if D < 0:
 '''
 import math
 
+
+
 k = 45
 b = 9
 
 c = 90
 
-def lineEqual(a, b):
+def lineEqual(a, b = 0):
     if not a == 0:
         return [-b / a]
     return []
@@ -51,5 +53,9 @@ def squareEqual(a, b, c):
         x2 = (-b - math.sqrt(D)) / (2 * a)
         return x1, x2
     return []
-
-print(lineEqual(1, 2))
+'''
+# общий решатель для уравнений
+def equal(a, b, c, d):
+    if c and d:
+        return
+'''
