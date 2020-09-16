@@ -1,38 +1,24 @@
+'''
+from formulaEquation import Equation
 
-from formulaEquation import squareEqual
+equal = Equation
 
-arr = (squareEqual(2, 5, 3))
+arr = equal.square(0, 1, 6, 2)
 for i in range(len(arr)):
     print('x =', i)
-
-
-
-
-
 '''
-a = 0
-while True:
-    print(a)
-    a += 2
-    if a < 10:
-        continue
-    break
 
+from Human.Human import Human
+from Human.Woman import Woman
 
-class NameOfClass:
-    name = 'Atrem'
-    soname = 'Rozhkoff'
+a = Human('Vovkas', 'Pomeloffs')
+b = Human('Artem', 'Rozhkoff')
+c = Woman('Marina', 'Petrova')
+d = Woman.reproduce(a, c)
 
-    def getName(self):
-        return self.name + ' ' + self.soname
+b.work()
+b.eat()
+c.eat()
 
-    def setName(self, name=None, soname=None)
-        self.name = name
+print(a.getName(), b.getName(), c.getName(), d.getName())
 
-a = NameOfClass()
-b = NameOfClass()
-a.soname = 'Pomeloff'
-a.setName("Vovkas")
-
-print(a.getName(), b.getName())
-'''

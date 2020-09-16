@@ -28,31 +28,25 @@ if D < 0:
 '''
 import math
 
+class Equation:
 
+    def line(self, a, b):
+        if not a == 0:
+            return [-b / a]
+        return []
 
-k = 45
-b = 9
-
-c = 90
-
-def lineEqual(a, b = 0):
-    if not a == 0:
-        return [-b / a]
-    return []
-
-
-def squareEqual(a, b, c):
-    #если вдруг уравнение оказалось линейным
-    if a == 0:
-        return lineEqual(b, c)
-    D = b ** 2 - 4 * a * c
-    if D == 0:
-        return [-b / (2 * a)]
-    elif D > 0:
-        x1 = (-b + math.sqrt(D)) / (2 * a)
-        x2 = (-b - math.sqrt(D)) / (2 * a)
-        return x1, x2
-    return []
+    def square(self, a, b, c):
+        #если вдруг уравнение оказалось линейным
+        if a == 0:
+            return self.line(b, c)
+        D = b ** 2 - 4 * a * c
+        if D == 0:
+            return [-b / (2 * a)]
+        elif D > 0:
+            x1 = (-b + math.sqrt(D)) / (2 * a)
+            x2 = (-b - math.sqrt(D)) / (2 * a)
+            return x1, x2
+        return []
 '''
 # общий решатель для уравнений
 def equal(a, b, c, d):
