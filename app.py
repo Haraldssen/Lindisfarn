@@ -18,7 +18,9 @@ d = Woman.reproduce(a, c)
 
 b.work()
 b.eat()
+b.beer()
 c.eat()
+c.shopping ()
 
 print(a.getName(), b.getName(), c.getName(), d.getName())
 
