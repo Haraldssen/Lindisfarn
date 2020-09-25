@@ -6,6 +6,7 @@ equal = Equation
 arr = equal.square(0, 1, 6, 2)
 for i in range(len(arr)):
     print('x =', i)
+
 '''
 
 from Human.Human import Human
@@ -23,4 +24,3 @@ c.eat()
 c.shopping ()
 
 print(a.getName(), b.getName(), c.getName(), d.getName())
-

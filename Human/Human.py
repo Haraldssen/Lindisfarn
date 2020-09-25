@@ -27,20 +27,24 @@ class Human:
             print(self.name, 'я покушаль! (=', 'денег осталось', self.money, 'зато поправился до', self.stamina)
         else:
             print(self.name, 'Нету денег! :(')
+            return ['money', 'stamina']
 
     def beer(self):
         if self.money > 0:
             self.money -= random.randint(0, 4)
             self.stamina -= 20
             self.moral += 10
-            print(self.name, 'зачем пил! :(', 'денег осталось', self.money, 'ощущения на', self.stamina - 150)
+                        print(self.name, 'зачем пил! :(', 'денег осталось', self.money, 'ощущения на', self.stamina - 150)
         else:
             print(self.name, 'займи, но выпей')
+return['money', 'stamina', 'moral']
+
 
     def work(self):
         self.money += 5
         self.stamina -= 10
         self.moral -= 5
+        return['money', 'moral', 'stamina']
         print(self.name, 'хорошо поработал')
 
 
