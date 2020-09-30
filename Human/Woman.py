@@ -6,7 +6,7 @@ class Woman(Human):
 
     def __init__(self, name='Ivan', soname='Ivanov', age=18, money = 0):
         super().__init__(name, soname, age, money)
-        self.sex  = 'female'
+        self.sex = 'female'
         self.stamina = 100
 
     @staticmethod
@@ -37,3 +37,4 @@ class Woman(Human):
             print(self.name, 'Люська позеленеет :)', self.money, self.moral)
         else:
             print(self.name, 'Связалась с нищебродом')
+

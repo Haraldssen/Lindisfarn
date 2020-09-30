@@ -1,5 +1,16 @@
-import pytest
+from Human.Human import Human
+from Human.Woman import Woman
 
-@pytest.fixture()
-def equal():
-    return Equation()
+woman = Woman(Human)
+
+human = Human()
+
+def q():
+    return woman.sex
+print(q())
+
+
+def m():
+    return human.stamina
+
+print(m())
