@@ -6,7 +6,6 @@ equal = Equation
 arr = equal.square(0, 1, 6, 2)
 for i in range(len(arr)):
     print('x =', i)
-'''
 
 
 from Human.Human import Human
@@ -28,19 +27,23 @@ print(player1.getName(), player2.getName(), player3.getName(), collaboration.get
 
 '''
 
+
 #мой первый декоратор
 # йуй сос мыслом!
 def decorator(func):
     print('Я - декоратор, который умеет сохранять свое состояние!')
+
     def func2():
         print('код, который исполнится перед вызовом')
         func()
         print('код, который исполнится после вызова')
     return func2
 
+
 @decorator
 def func3():
     print('А я еще одна функция!')
+
 
 #func3()
 
@@ -51,10 +54,17 @@ def square(func):
         return result * result
     return wrapper
 
+@square
+def add(a, b, c):
+    return a + b + c
+
+print(add(3, 7, -2))
+
 #возведение в степень
 def pow(power):
     def decorator(func):
         def wrapper(*args, **kwargs):
+            print(power)
             i = 0
             result = 1
             while i < power:
@@ -64,10 +74,10 @@ def pow(power):
         return wrapper
     return decorator
 
-
 @pow(power=3)
 def add(a, b, c):
     return a + b + c
 
 print(add(3, 7, 0))
-'''
+
+
